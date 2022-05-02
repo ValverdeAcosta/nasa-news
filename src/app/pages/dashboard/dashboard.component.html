@@ -1,0 +1,9 @@
+<div class="grid grid-row-2 grid-cols-3 gap-y-3 py-20 px-20 ml-20">
+    <div *ngFor="let card of cards">
+        <button (click)="goToDetails(card.date)" class="bg-[#fefeff] border w-80 h-[25rem] text-xs rounded-xl p-6 space-y-4 space-x-2 z-auto drop-shadow-xl hover:border-2 hover:border-sky-200">
+            <h2>{{card.date}}</h2>
+            <img src="{{card.url}}" width="240" height="240" /> 
+            <h1>{{card.title}}</h1>
+        </button>
+    </div>
+</div>

@@ -5,11 +5,13 @@ import { ConfigService } from './config/config.service';
 import { NasaStore } from './shared/store/nasa.store';
 import { DateFormat } from './shared/helpers/date.format';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
