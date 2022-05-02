@@ -19,7 +19,7 @@ describe('AppComponent', () => {
   it(`should have as title 'nasa-news'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('nasa-news');
+    expect(app.logo).toContain('NASA');
   });
 
   it('should render title', () => {

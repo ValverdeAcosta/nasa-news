@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'nasa-news';
+  logo: string = "/assets/images/NASA-Logo.png";
 }
