@@ -6,12 +6,14 @@ import { NasaStore } from './shared/store/nasa.store';
 import { DateFormat } from './shared/helpers/date.format';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DetailsComponent } from './pages/details/details.component';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
