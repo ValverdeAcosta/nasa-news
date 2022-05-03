@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NasaService } from '../../core/services/nasa.service'
 import { NasaStore } from '../../shared/store/nasa.store';
 import { Router } from '@angular/router';
+import { INasaNews } from 'src/app/interfaces/nasa.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  cards:any;
+  cards:INasaNews | any
 
   constructor(
     private nasaService: NasaService,
@@ -19,17 +20,17 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   async goToDetails(data:string) {
-    await this.nasaService.getRepos(data).subscribe(
-      (response) => {
+    this.nasaService.getRepos(data).subscribe(
+      (response: INasaNews[]) => {
         this.nasaStore.nasaStorage = response,
-        this.route.navigate(['/details'])
+          this.route.navigate(['/details']);
       }
     );
   }
 
   async initialCards() {
-    await this.nasaService.setInitialCards().subscribe(
-      (response) => this.cards = response
+    this.nasaService.setInitialCards().subscribe(
+      (response: INasaNews[]) => this.cards = response
     )
   }
 
