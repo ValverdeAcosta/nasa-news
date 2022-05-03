@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { INasaNews } from 'src/app/interfaces/nasa.component';
 import { NasaStore } from '../../shared/store/nasa.store';
 
 @Component({
@@ -8,7 +9,7 @@ import { NasaStore } from '../../shared/store/nasa.store';
 })
 export class DetailsComponent implements OnInit {
 
-  data:any = [];
+  data:INasaNews | any
 
   constructor(public nasaStore: NasaStore) { }
 
