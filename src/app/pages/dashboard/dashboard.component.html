@@ -1,9 +1,7 @@
 <div class="grid lg:grid-row-2 lg:grid-cols-3 md:grid-row-3 md:grid-cols-2 grid-row-6 grid-cols-1 gap-y-3 py-20 px-20 ">
-    <div *ngFor="let card of cards">
-        <button (click)="goToDetails(card.date)" class="bg-[#fefeff] border w-80 h-[25rem] text-xs rounded-xl p-6 space-y-4 space-x-2 drop-shadow-xl hover:border-2 hover:border-sky-200">
-            <h2>{{card.date}}</h2>
-            <img src="{{card.url}}" width="240" height="240" /> 
-            <h1>{{card.title}}</h1>
-        </button>
-    </div>
+    <button *ngFor="let card of cards" (click)="goToDetails(card.date)"  class="align-middle hover:shadow-md hover:shadow-slate-600 bg-[#fefeff] border w-80 h-[25rem] text-xs rounded-xl space-y-4 drop-shadow-xl">
+        <h2 class="italic">{{card.date}}</h2>
+        <img class="max-h-44 ml-10" src="{{card.url}}" width="240" height="240" />
+        <h1 class="font-semibold">{{card.title}}</h1>
+    </button>
 </div>
