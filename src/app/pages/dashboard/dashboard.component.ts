@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../../config/config.service'
+import { NasaService } from '../../core/services/nasa.service'
 import { NasaStore } from '../../shared/store/nasa.store';
 import { Router } from '@angular/router';
 
@@ -13,13 +13,13 @@ export class DashboardComponent implements OnInit {
   cards:any;
 
   constructor(
-    private configService: ConfigService,
+    private nasaService: NasaService,
     public nasaStore: NasaStore,
     private route: Router,
   ) { }
 
   async goToDetails(data:string) {
-    await this.configService.getRepos(data).subscribe(
+    await this.nasaService.getRepos(data).subscribe(
       (response) => {
         this.nasaStore.nasaStorage = response,
         this.route.navigate(['/details'])
@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
   }
 
   async initialCards() {
-    await this.configService.setInitialCards().subscribe(
+    await this.nasaService.setInitialCards().subscribe(
       (response) => this.cards = response
     )
   }
