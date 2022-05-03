@@ -30,37 +30,37 @@ export class NasaService {
 
         return combineLatest([
             card1.pipe(
-                catchError((err:any) => {
+                catchError((err:Observable<null>) => {
                     console.log(err)
                     return of(null)
                 })
             ),
             card2.pipe(
-                catchError((err:any) => {
+                catchError((err:Observable<null>) => {
                     console.log(err)
                     return of(null)
                 })
             ),
             card3.pipe(
-                catchError((err:any) => {
+                catchError((err:Observable<null>) => {
                     console.log(err)
                     return of(null)
                 })
             ),
             card4.pipe(
-                catchError((err:any) => {
+                catchError((err:Observable<null>) => {
                     console.log(err)
                     return of(null)
                 })
             ),
             card5.pipe(
-                catchError((err:any) => {
+                catchError((err:Observable<null>) => {
                     console.log(err)
                     return of(null)
                 })
             ),
             card6.pipe(
-                catchError((err:any) => {
+                catchError((err:Observable<null>) => {
                     console.log(err)
                     return of(null)
                 })
