@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DateFormat } from '../shared/helpers/date.format';
+import { DateFormat } from '../../shared/helpers/date.format';
 import { combineLatest, Observable, of } from 'rxjs';
 import { catchError} from 'rxjs/operators';
 
 @Injectable()
-export class ConfigService {
+export class NasaService {
 
     baseURL: string = "https://api.nasa.gov/planetary/apod?api_key=zdUP8ElJv1cehFM0rsZVSQN7uBVxlDnu4diHlLSb&date=";
 
