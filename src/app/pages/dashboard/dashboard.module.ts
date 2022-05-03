@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard.component';
-import { ConfigService } from '../../config/config.service'
+import { NasaService } from '../../core/services/nasa.service'
 import { NasaStore } from '../../shared/store/nasa.store';
 import { DateFormat } from '../../shared/helpers/date.format';
 import { AppRoutingModule } from '../../app-routing.module';
 
 @NgModule({
   declarations: [
-    ConfigService,
+    NasaService,
     NasaStore,
     DateFormat,
     AppRoutingModule
